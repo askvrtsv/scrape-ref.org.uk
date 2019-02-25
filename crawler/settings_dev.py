@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+
+from .settings import *
+
+
+DOWNLOAD_DELAY = 3
+CONCURRENT_REQUESTS_PER_DOMAIN = 1
+CONCURRENT_REQUESTS_PER_IP = 1
+
+COOKIES_DEBUG = True
