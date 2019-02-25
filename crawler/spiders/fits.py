@@ -43,8 +43,8 @@ class FitsSpider(scrapy.Spider):
         for row in response.css('.fits tbody tr'):
             l = FitLoader(response=response, selector=row)
 
-            for col, field in enumerate(COLS, 1):
-                l.add_xpath(field, f'./td[{col}]')
+            for colnum, colname in enumerate(COLS, 1):
+                l.add_xpath(colname, f'./td[{colnum}]')
 
             l.add_xpath('fit_link', './td[1]/a/@href')
             l.add_xpath('related_link', './td[13]/a/@href')
